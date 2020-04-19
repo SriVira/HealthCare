@@ -17,6 +17,8 @@ public class PatientService {
 	
 	Patient patientObj = new Patient();
 
+//	 Implement the Read Items Operation 
+	
 	@GET
 	@Path("/")
 	@Produces(MediaType.TEXT_HTML)
@@ -24,6 +26,8 @@ public class PatientService {
 		return patientObj.readPatient();
 	}
 
+//	 Implement the Create/Insert Item Operation 
+	
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -36,6 +40,8 @@ public class PatientService {
 		return output;
 	}
 
+//	 Implement the Update Operation 
+	
 	@PUT
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -61,6 +67,8 @@ public class PatientService {
 		String output = patientObj.updatePatient(pID, pNic, pName, pAddress, pEmail, pTele, pAge, pStatus, pAllergic, pWard, pBed);
 		return output;
 	}
+	
+//	 Implement the Delete Operation 
 
 	@DELETE
 	@Path("/")
