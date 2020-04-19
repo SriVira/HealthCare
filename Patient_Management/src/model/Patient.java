@@ -135,12 +135,11 @@ public class Patient {
 	 if (con == null)
 	 {return "Error while connecting to the database for updating."; }
 	 
-	 // create a prepared statement
+	 // Create a prepared statement
 	 String query = "UPDATE patients SET pNic=?,pName=?,pAddress=?,pEmail=?,pTele=?,pAge=?,pStatus=?,pAllergic=?,pWard=?,pBed=? WHERE pID=?";
 	 PreparedStatement preparedStmt = con.prepareStatement(query);
 	 
-	 // binding values
-//		preparedStmt.setInt(1, 0);
+	 // Binding Values
 		preparedStmt.setString(1, nic);
 		preparedStmt.setString(2, name);
 		preparedStmt.setString(3, address);
